@@ -24,7 +24,7 @@ $(document).ready(function() {
         var time = $("#time").val();
 
         //get information based on the time
-        //var frequency = $("#frequency").val().trim();
+        var frequency = $("#frequency").val().trim();
         
         // Code for the push
         database.ref().push({
