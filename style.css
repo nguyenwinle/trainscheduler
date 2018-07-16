@@ -4,6 +4,10 @@ h1 {
     color: white;
 }
 
+h4 {
+    font-weight: bold;
+}
+
 .tracker {
     color: #14a76c;
 
@@ -21,6 +25,29 @@ p {
     letter-spacing: 2px;
 }
 
-i {
+.schedule {
+    background-color: #303030;
+    color: #14a76c;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.addtrain {
+    background-color: #303030;
+    color: #14a76c;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.form-group {
+    padding-top: 10px;
     
+}
+
+footer {
+    margin: 50px;
 }
