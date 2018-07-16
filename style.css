@@ -1,0 +1,15 @@
+h1 {
+    font-size: 65px;
+    font-weight: bolder;
+    color: white;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: #303030;
+
+}
+
+p {
+    color: #787878;
+}
