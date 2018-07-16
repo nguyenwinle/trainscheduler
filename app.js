@@ -48,7 +48,7 @@ $(document).ready(function () {
         var newRow = $("<tr>").append(
             $('<td>').text(emptyTrain),
             $('<td>').text(emptyDestination),
-            $('<td>').text(emptyFrequency),
+            $('<td>').text(emptyFrequency + " min"),
             $('<td>').text(emptyTime),
             $('<td>').text(emptyAway)
         );

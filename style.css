@@ -48,6 +48,10 @@ p {
     
 }
 
+td {
+    text-transform: uppercase;
+}
+
 footer {
     margin: 50px;
 }
