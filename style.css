@@ -4,6 +4,11 @@ h1 {
     color: white;
 }
 
+.tracker {
+    color: #14a76c;
+
+}
+
 .jumbotron {
     text-align: center;
     background-color: #303030;
@@ -12,4 +17,10 @@ h1 {
 
 p {
     color: #787878;
+    padding-top: 8px;
+    letter-spacing: 2px;
+}
+
+i {
+    
 }
