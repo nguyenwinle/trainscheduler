@@ -41,9 +41,16 @@ $(document).ready(function () {
         var emptyDestination = snapshot.val().destination;
         var emptyTime = snapshot.val().time;
         var emptyFrequency = snapshot.val().frequency;
-        var emptyAway;
+        var current_time = moment().format("HH:mm");
+        console.log(current_time);
 
-        // var emptyMonths = moment().diff(emptyStart, "months");
+        var start = moment.duration(current_time, "HH:mm");
+        var end = moment.duration(emptyTime);
+        var diff = end.subtract(start);
+        var emptyAway = diff.hours() + " hours " + diff.minutes() + " minutes ";
+
+        diff.hours(); // return hours
+        diff.minutes();
 
         var newRow = $("<tr>").append(
             $('<td>').text(emptyTrain),
