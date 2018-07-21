@@ -41,23 +41,29 @@ $(document).ready(function () {
         var emptyDestination = snapshot.val().destination;
         var emptyTime = snapshot.val().time;
         var emptyFrequency = snapshot.val().frequency;
-        var current_time = moment().format("HH:mm");
-        console.log(current_time);
+    
+        // First Time (pushed back 1 year to make sure it comes before current time)
+        var convertTime = moment(emptyTime, "HH:mm");
+        var currentTime = moment();
 
-        var start = moment.duration(current_time, "HH:mm");
-        var end = moment.duration(emptyTime);
-        var diff = end.subtract(start);
-        var emptyAway = diff.hours() + " hours " + diff.minutes() + " minutes ";
+        // this gets the difference between the times
+        var diffTime = moment().diff(convertTime, "minutes");
 
-        diff.hours(); // return hours
-        diff.minutes();
+        // Time apart (remainder)
+        var remainder = diffTime % emptyFrequency;
+
+        // Minute Until Train
+        var minutesAway = emptyFrequency - remainder;
+
+        // Next Train
+        var nextTrain = moment().add(minutesAway, "minutes");
 
         var newRow = $("<tr>").append(
             $('<td>').text(emptyTrain),
             $('<td>').text(emptyDestination),
             $('<td>').text(emptyFrequency + " min"),
-            $('<td>').text(emptyTime),
-            $('<td>').text(emptyAway)
+            $("<td>").text(moment(nextTrain).format("hh:mm")),
+            $('<td>').text(minutesAway)
         );
         
         $("tbody").append(newRow);
